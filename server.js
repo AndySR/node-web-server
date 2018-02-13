@@ -2,7 +2,7 @@
  * @Author: andy
  * @Date:   2016-07-29T03:46:33+10:00
  * @Last modified by:   andy
- * @Last modified time: 2018-02-13T15:01:15+11:00
+ * @Last modified time: 2018-02-13T15:05:16+11:00
  */
 
 
@@ -61,6 +61,6 @@ app.get('/bad', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
 });
