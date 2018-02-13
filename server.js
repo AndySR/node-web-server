@@ -1,12 +1,3 @@
-/**
- * @Author: andy
- * @Date:   2016-07-29T03:46:33+10:00
- * @Last modified by:   andy
- * @Last modified time: 2018-02-13T15:05:16+11:00
- */
-
-
-
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
@@ -14,6 +5,7 @@ const fs = require('fs');
 const port = process.env.PORT || 3000;
 
 var app = express();
+
 
 hbs.registerPartials(__dirname + '/views/partials')
 app.set('view engine', 'hbs');
@@ -53,6 +45,12 @@ app.get('/about', (req, res) => {
     pageTitle: 'About Page'
   });
 });
+
+app.get('/projects', (req,res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects'
+  });
+})
 
 // /bad - send back json with errorMessage
 app.get('/bad', (req, res) => {
